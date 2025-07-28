@@ -50,8 +50,8 @@ public class OrderService {
 
     public void printDbStatus() {
         logger.info("Printing DB status");
-        orderRepository.findAll().forEach(System.out::println);
-        productRepository.findAll().forEach(System.out::println);
+        orderRepository.findAll().forEach(o -> logger.info(o.toString()));
+        productRepository.findAll().forEach(p -> logger.info(p.toString()));
     }
 }
 
